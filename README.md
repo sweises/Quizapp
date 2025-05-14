@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+sudo apt update
+sudo apt install postgresql postgresql-contrib libpq-dev
+sudo systemctl start postgresql
 
-* Ruby version
 
-* System dependencies
+sudo -u postgres createuser --superuser <euer wsl username>
 
-* Configuration
+export DB_USERNAME=<euer wsl username>
+export DB_PASSWORD=<beliebiges passwort>
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+rails db:create
